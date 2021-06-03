@@ -4,7 +4,7 @@ The task of our assignment is to build an Image Classifier for photos that have 
 
 This submission uses the [EfficientNetB5 algorithm](https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html), which manages to achieve superior performance vs competing algorithms with lesser parameters (see diagram below).  This speeds up training time significantly while allowing researchers to try different model prototypes.
 
-![model_size_vs_accuracy.png](images/model_size_vs_accuracy_png)
+![model_size_vs_accuracy.png](https://github.com/lance10t/transfer-learning-efficientnet/blob/main/images/model_size_vs_accuracy.png)
 
 ## Data Used
 The data provided as part of this assignment had been split up into 72 subfolders, with the name of the subfolder as the class name.  Prior to the start of the training, we had performed the following data preparation as it aided in the flow and also sped up the training else the bottleneck becomes the CPU-intensive task of resizing the full-sized pictures into 456x456 images.  In earlier runs, the CPU could not feed the images fast enough to the GPU for training, and each repeated run went through the same unncessary process of resizing again.
@@ -14,7 +14,7 @@ Thus, we had performed the following:
 1. Create a train-val-test subfolder structure using the splitfolders Python package.  The package can be downloaded from the [PyPi repository](https://pypi.org/project/split-folders/)
 2. Ran the helper script to resize the images in these folders to the desired size.  In the setup, we had created a few sets of image sizes as we wanted to experiment with different EfficientNetB* algorithms, each requiring different image sizes as highlighted below:
 
-![Screenshot 4-15-21 at 11.50.26 AM.png](attachment:afba43e7-d348-47e3-be1d-4edfeaf7eae7.png)
+![Screenshot 4-15-21 at 11.50.26 AM.png](https://github.com/lance10t/transfer-learning-efficientnet/blob/main/images/Screenshot%204-15-21%20at%2011.50.26%20AM.png)
 
 ## Training Phases
 We perform the training in two distinct steps.
