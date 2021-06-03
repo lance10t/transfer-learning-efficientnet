@@ -4,7 +4,7 @@ The task of our assignment is to build an Image Classifier for photos that have 
 
 This submission uses the [EfficientNetB5 algorithm](https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html), which manages to achieve superior performance vs competing algorithms with lesser parameters (see diagram below).  This speeds up training time significantly while allowing researchers to try different model prototypes.
 
-![model_size_vs_accuracy.png](attachment:4042a9cd-bf36-4368-9295-240b17d33abf.png)
+![model_size_vs_accuracy.png](images/model_size_vs_accuracy_png)
 
 ## Data Used
 The data provided as part of this assignment had been split up into 72 subfolders, with the name of the subfolder as the class name.  Prior to the start of the training, we had performed the following data preparation as it aided in the flow and also sped up the training else the bottleneck becomes the CPU-intensive task of resizing the full-sized pictures into 456x456 images.  In earlier runs, the CPU could not feed the images fast enough to the GPU for training, and each repeated run went through the same unncessary process of resizing again.
